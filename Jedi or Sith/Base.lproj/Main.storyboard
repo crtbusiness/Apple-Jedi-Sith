@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,115 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Jedi_or_Sith" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="StarWarsTheLastJedi" translatesAutoresizingMaskIntoConstraints="NO" id="VJk-HF-4Yx">
+                                <rect key="frame" x="110" y="37" width="154" height="82"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Ray" translatesAutoresizingMaskIntoConstraints="NO" id="9bO-Xy-Lh4">
+                                <rect key="frame" x="26" y="199" width="116" height="119"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Kylo_Ren_profile" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-dJ-acy">
+                                <rect key="frame" x="235" y="199" width="115" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uG1-BM-FtG">
+                                <rect key="frame" x="26" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jedi">
+                                    <color key="titleColor" red="0.0016493528382852674" green="0.29513156414031982" blue="0.65963327884674072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rJediPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jed-1c-UYx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eUp-xR-Qdh">
+                                <rect key="frame" x="112" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sith">
+                                    <color key="titleColor" red="0.76470588235294112" green="0.023529411764705882" blue="0.10980392156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="rSithPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SL4-Cq-Xaw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jL6-7X-F1n">
+                                <rect key="frame" x="235" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Jedi">
+                                    <color key="titleColor" red="0.0" green="0.29411764709999999" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="kJediPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MeK-Fo-ZNN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66t-Dl-uhZ">
+                                <rect key="frame" x="320" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Sith">
+                                    <color key="titleColor" red="0.76470588240000004" green="0.023529411760000001" blue="0.10980392160000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="kSithPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="doY-5O-sGs"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="BlueLightSaber" translatesAutoresizingMaskIntoConstraints="NO" id="08l-I2-tOC">
+                                <rect key="frame" x="27" y="396" width="317" height="222"/>
+                            </imageView>
+                            <imageView hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="RedLightSaber" translatesAutoresizingMaskIntoConstraints="NO" id="b6c-wn-z4n">
+                                <rect key="frame" x="29" y="396" width="317" height="222"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcJ-lo-C4m">
+                                <rect key="frame" x="29" y="381" width="317" height="237"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.8666666666666667" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="b6c-wn-z4n" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="3O0-pV-OYm"/>
+                            <constraint firstItem="b6c-wn-z4n" firstAttribute="top" secondItem="Sra-dJ-acy" secondAttribute="bottom" constant="69" id="5nL-zs-Pzm"/>
+                            <constraint firstItem="XcJ-lo-C4m" firstAttribute="width" secondItem="b6c-wn-z4n" secondAttribute="width" id="7W5-CR-zO7"/>
+                            <constraint firstItem="08l-I2-tOC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="9cD-Xv-ddE"/>
+                            <constraint firstItem="VJk-HF-4Yx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="JuH-B9-Fr6"/>
+                            <constraint firstItem="b6c-wn-z4n" firstAttribute="top" secondItem="9bO-Xy-Lh4" secondAttribute="bottom" constant="78" id="KHW-mm-8Kj"/>
+                            <constraint firstItem="VJk-HF-4Yx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="KkF-ki-xd7"/>
+                            <constraint firstItem="VJk-HF-4Yx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KwU-Of-iyx"/>
+                            <constraint firstItem="XcJ-lo-C4m" firstAttribute="height" secondItem="b6c-wn-z4n" secondAttribute="height" id="ONL-fG-X4h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sra-dJ-acy" secondAttribute="trailing" constant="25" id="OUp-eD-Ehb"/>
+                            <constraint firstItem="XcJ-lo-C4m" firstAttribute="centerX" secondItem="b6c-wn-z4n" secondAttribute="centerX" id="S5v-I0-SbV"/>
+                            <constraint firstItem="08l-I2-tOC" firstAttribute="top" secondItem="Sra-dJ-acy" secondAttribute="bottom" constant="69" id="cET-kB-xKu"/>
+                            <constraint firstItem="9bO-Xy-Lh4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="e0a-4K-w1D"/>
+                            <constraint firstItem="b6c-wn-z4n" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hg3-w8-FMS"/>
+                            <constraint firstItem="08l-I2-tOC" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jK7-lr-qqk"/>
+                            <constraint firstItem="08l-I2-tOC" firstAttribute="top" secondItem="9bO-Xy-Lh4" secondAttribute="bottom" constant="78" id="uVd-By-DhT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="blueLightSaber" destination="08l-I2-tOC" id="BsN-2c-Xmk"/>
+                        <outlet property="buttonKyloJedi" destination="jL6-7X-F1n" id="W1q-O2-WAh"/>
+                        <outlet property="buttonKyloSith" destination="66t-Dl-uhZ" id="xYY-cJ-s8B"/>
+                        <outlet property="buttonRayJedi" destination="uG1-BM-FtG" id="ED0-o1-C7q"/>
+                        <outlet property="buttonRaySith" destination="eUp-xR-Qdh" id="EKJ-fl-a6h"/>
+                        <outlet property="labelOutput" destination="XcJ-lo-C4m" id="yBd-C6-ajk"/>
+                        <outlet property="rSithPressed" destination="eUp-xR-Qdh" id="YnA-5e-grh"/>
+                        <outlet property="redLightSaber" destination="b6c-wn-z4n" id="9jN-G9-8Dg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BlueLightSaber" width="400" height="280"/>
+        <image name="Kylo_Ren_profile" width="340" height="387"/>
+        <image name="Ray" width="125" height="125"/>
+        <image name="RedLightSaber" width="400" height="300"/>
+        <image name="StarWarsTheLastJedi" width="320" height="180"/>
+    </resources>
 </document>
